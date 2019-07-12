@@ -4,12 +4,9 @@ import "./style.css";
 function Card(props) {
   return (
     <div className="col-sm-12 col-md-4 col-lg-4 my-2 text-center">
-      <div className="customCard" state={props.clicked.toString()} key={props.id.toString()}>
+      <div className="customCard" state={props.clicked.toString()} key={props.id}>
         <div className="img-container">
-          <img className="img-fluid" alt={props.id} src={props.imageUrl} />
-        </div>
-        <div>
-          <button type="button" className ="btn btn-primary btn-block" onClick={() => props.clickImage(props.id)}>id: {props.id}</button>
+          <img className="img-fluid" alt={props.index} src={props.imageUrl} onClick={() => props.clickImage(props.id)}/>
         </div>
       </div>
     </div>
