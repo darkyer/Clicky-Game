@@ -16,7 +16,7 @@ There are two ways to test this:
 ## Built With
 
 * [Javascript](https://www.javascript.com/)
-* [Jquery](https://jquery.com/)
+* [Bootstrap](https://getbootstrap.com/)
 * [React](https://reactjs.org/)
 
 ## Authors

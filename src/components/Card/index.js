@@ -6,7 +6,7 @@ function Card(props) {
     <div className="col-sm-12 col-md-4 col-lg-4 my-4 text-center">
       <div className="customCard" state={props.clicked.toString()} key={props.id}>
         <div className="img-container">
-          <img className="img-fluid" alt={props.index} src={props.imageUrl} onClick={() => props.clickImage(props.id)}/>
+          <img className="img-fluid shadow" alt={props.index} src={props.imageUrl} onClick={() => props.clickImage(props.id)}/>
         </div>
       </div>
     </div>
