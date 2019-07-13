@@ -1,0 +1,8 @@
+.result {
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: none !important;
+  color: white !important;
+  margin-top: 50px;
+  text-shadow: 2px 2px #1d1d1d21;
+}

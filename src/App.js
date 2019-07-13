@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Result from "./components/Result";
 import Card from "./components/Card";
 import Score from "./components/Score";
 import Nav from "./components/Nav";
@@ -46,6 +47,8 @@ const initialState = {
     }
   ]
 };
+
+let resultText = "Click all the images without repiting them";
 
 class App extends Component {
 
@@ -93,13 +96,14 @@ class App extends Component {
 
   clickImage = id => {
     console.log("button pressed: " + id);
-    var newCards = this.state.cards.slice();
+    let newCards = this.state.cards.slice();
     if (newCards[id].clicked === false) {
       newCards[id] = {
         imageUrl: this.state.cards[id].imageUrl,
         clicked: true
       }
       newCards = this.shuffleCards(newCards);
+      resultText = "Correct!";
       this.setState({ cards: newCards, score: this.state.score + 1 });
     } else {
       this.resetScore();
@@ -108,7 +112,8 @@ class App extends Component {
 
   resetScore = () => {
     console.log("reseting score***");
-    var resetState = initialState;
+    resultText = "Wrong, you need to start over";
+    let resetState = initialState;
     resetState.cards = this.shuffleCards(resetState.cards);
     this.setState(resetState);
   }
@@ -129,7 +134,7 @@ class App extends Component {
   }
 
   shuffle = (arra1) => {
-    var ctr = arra1.length, temp, index;
+    let ctr = arra1.length, temp, index;
 
     while (ctr > 0) {
       index = Math.floor(Math.random() * ctr);
@@ -151,6 +156,7 @@ class App extends Component {
           <Wrapper>
             <div className="row">
               <div className="col-sm-12 col-md-12 col-lg-12 m-1">
+              <Result>{resultText}</Result>
                 <Score
                   score={this.state.score}
                 />

@@ -37,4 +37,15 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    var x = 0;
+    var y = 0;
+    setInterval(function(){
+        x+=1;
+        y-=1;
+        $('body').css('background-position-x', x + 'px');
+        $('body').css('background-position-y', y + 'px');
+    }, 50);
+  </script>
 </html>
