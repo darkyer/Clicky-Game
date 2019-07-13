@@ -1,12 +1,8 @@
-.customCard {
-  background: #fff;
-  border-radius: 20px !important;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-}
-
 .img-container img{
   height:250px;
+  width: 100%;
   object-fit: cover;
   border-radius: 20px !important;
+  box-shadow: 2px 2px #1d1d1d21;
 }
 
