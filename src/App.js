@@ -48,7 +48,7 @@ const initialState = {
   ]
 };
 
-let resultText = "Click all the images without repiting them";
+let resultText = "Click all the images without repeating them";
 
 class App extends Component {
 
